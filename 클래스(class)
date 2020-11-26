@@ -1,0 +1,53 @@
+# class 클래스 이름:
+    #클래스 내용
+    
+    
+#클래스 선언   
+class Fruit:
+  pass
+
+# 과일 선언
+fruit = Fruit()
+
+# 과일 리스트 선언
+fruits = [
+    Fruit("사과"),
+    Fruit("배"),
+    Fruit("복숭아"),
+    Fruit("바나나"),
+    Fruit("키위"),
+    Fruit("딸기"),
+]
+
+# 생성자
+    #class 클래스 이름:
+        #def __init__(self, 추가적인 매개변수) #self라고 쓰는 건 약속
+            #pass
+
+
+class Fruit:
+    def __init__(self, name, size, form, color):
+        print("과일이름 생성")
+        self.name = name
+        self.size = size
+        self.form = form
+        self.color = color
+    def __del__(self):
+        print("과일이름 제거")
+    def 출력(self):
+        print(self.name, self.size, self.form, self.color)
+
+fruits = [
+    Fruit("사과", 20, "round", "green")
+    Fruit("바나나", 10, "oval", "white"),
+    Fruit("복숭아", 50, "round", "pink"),
+    Fruit("딸기", 15, "triangle", "red"),
+    Fruit("오렌지", 50, "round", "orange")
+]
+
+#fruits[0].name
+#fruits[0].size
+#fruits[0].form
+#fruits[0].color
+
+fruits.출력()
