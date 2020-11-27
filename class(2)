@@ -1,0 +1,50 @@
+# 클래스 예시 2
+
+class Fruit:
+    def __str__(self):
+        return "{} {}개수".format(self.이름, self.개수)
+    def __init__(self, 이름, 개수):
+        print("객체가 생성되었습니다.")
+        self.이름 = 이름
+        self.개수 = 개수
+    def __del__(self):
+        print("객체가 소멸되었습니다.")
+    def 출력(self):
+        print(self.이름, self.개수)
+
+fruit = Fruit("오렌지", 58)
+fruit.출력()
+print(str(fruit))
+
+# 여러가지 이름
+
+class Fruit:
+    def __init__(self, 이름, 크기):
+        self.이름 = 이름
+        self.크기 = 크기
+    def __eq__(self, other):
+        print("eq() 함수")
+        return self.크기 == other.크기
+    def __ne__(self, other):
+        print("ne() 함수")
+        return self.크기 != other.크기
+    def __gt__(self, other):
+        print("gt() 함수")
+        return self.크기 > other.크기
+    def __ge__(self, other):
+        print("ge() 함수")
+        return self.크기 >= other.크기
+    def __le__(self, other):
+        print("le() 함수")
+        return self.크기 < other.크기
+    def __le__(self, other): 
+        print("le() 함수")
+        return self.크기 <= other.크기
+      
+fruit = Fruit("사과", 30)
+print(fruit == fruit )
+print(fruit != fruit)
+print(fruit > fruit)
+print(fruit >= fruit)
+print(fruit < fruit)
+print(fruit <= fruit)
