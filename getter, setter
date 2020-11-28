@@ -1,0 +1,29 @@
+
+# 프라이빗 변수 : 클래스 내부의 변수를 외부에서 사용하는 것을 막는 것 : __변수이름
+# getter, setter : 프라이빗 변수의 값을 추출하거나 변경할 목적으로, 간접적으로 속성에 접근
+
+class Feature:
+    def __init__(self, size, weight):
+        if size <= 0 or weight <= 0:
+            raise Exception("크기와 높이는 음수가 나올 수 없습니다")
+        self.__size = size
+        self.__weight = weight
+
+    def get_size(self):
+        return self.__size
+    def set_size(self, size):
+        if size <= 0:
+            raise Exception("크기는 음수가 나올 수 없습니다")
+        self.size = size
+
+    def get_weight(self):
+        return self.__weight
+    def set_size(self, weight):
+        if weight <= 0:
+            raise Exception("높이는 음수가 나올 수 없습니다")
+        self.weight = weight
+
+feature = Feature(10, 10)
+print(feature.get_size())
+print(feature.get_weight)
+print()
