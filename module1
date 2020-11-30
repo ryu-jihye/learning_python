@@ -1,0 +1,21 @@
+ # 모듈 : 다른 사람이 만들어 둔 변수와 함수를 읽어들여서 사용하 수 있는 기능
+ # import A
+ # import A as a
+ # from A import b, c
+ # from A import *
+ 
+ # 이 4가지를 가장 많이 사용함
+ 
+ # math = __import__("math")
+
+import math
+
+import math as 수학
+# = 수학 = __import__("math")
+
+
+from math import pi, sin
+
+from math import *
+print(pi)
+print(sin(10))
