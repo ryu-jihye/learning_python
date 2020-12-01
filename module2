@@ -1,0 +1,22 @@
+
+# 기본 = math 모듈
+import math
+# 모듈을 읽어 들입니다
+print(math.sin(1))
+print(math.cos(1))
+print(math.tan(1))
+print(math.floor(2.5)) #내림
+print(math.ceil(2.5)) #올림
+
+# from 구문
+from math import sin, cos, tan, floor, ceil
+# from 모듈이름 import 가져오고 싶은 변수 또는 함수
+print(sin(1))
+print(tan(1))
+print(ceil(2.5))
+
+# as 구문
+import math as m
+# import 모듈 as 사용하고 싶은 
+print(m.cos(1))
+print(m.floor(2.5))
